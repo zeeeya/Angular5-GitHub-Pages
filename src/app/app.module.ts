@@ -9,6 +9,8 @@ import { AboutComponent } from './about/about.component';
 
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataService } from './data.service';
+
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    providers: [DataService]
   ],
   providers: [],
   bootstrap: [AppComponent]
