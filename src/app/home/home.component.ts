@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { trigger,style,transition,animate,keyframes,query,stagger } from '@angular/animations';
 import { DataService } from '../data.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -37,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private _data: DataService) { }
 
-   ngOnInit() {
+ ngOnInit() {
     this.itemCount = this.goals.length;
     this._data.goal.subscribe(res => this.goals = res);
     this._data.changeGoal(this.goals);
@@ -53,4 +54,5 @@ export class HomeComponent implements OnInit {
   removeItem(i) {
     this.goals.splice(i, 1);
     this._data.changeGoal(this.goals);
+  }
   }

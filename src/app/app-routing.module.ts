@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: HomeComponent
   },
-  {
+    {
     path: 'about/:id',
     component: AboutComponent
   }
@@ -18,7 +18,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { };
 
 sendMeHome() {
     this.router.navigate(['']);
